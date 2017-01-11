@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+    <link rel="stylesheet" href="../src/css/main/styles.css">
+
+    <link rel="stylesheet" href="../src/css/texts/text.css">
+    <link rel="stylesheet" href="../src/css/views/buttons.css">
+    <link rel="stylesheet" href="../src/css/views/inputs.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+</head>
+<body class="bg-color">
+<div class="container">
+    <div class="container-fluid text-center margin-bottom">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="../src/img/logo.png" class="logo-image" width="100" height="100" alt="logo" onclick="location.href='index.html'">
+                <h4 class="custom-title-center">QUESTION DAY</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <!--<div class="card">
+                    <h4 class="custom-title-center">nickname</h4>
+                    <img src="../src/img/default_avatar.png" width="100" height="100" class="img-circle" alt="avatar">
+
+                    <div>
+                        <button type="button" class="custom-button">Settings</button>
+                        <button type="button" class="custom-button">Log Out</button>
+                        <button type="button" class="custom-button custom-button__important">Ask</button>
+                    </div>
+                </div>-->
+                <div class="card">
+                    <button type="button" class="custom-button no-margin-top" onclick="location.href='login.html'">Log In</button>
+                    <button type="button" class="custom-button" onclick="location.href='signup.html'">Register</button>
+                </div>
+                <div class="card">
+                    <h4 class="custom-title-center">Popular Tags</h4>
+                    <p class="custom-text-center">
+                        <a href="#">perl</a>
+                        <a href="#">python</a>
+                        <a href="#">TechnoPark</a>
+                        <a href="#">MySQL</a>
+                        <a href="#">django</a>
+                        <a href="#">Mail.Ru</a>
+                        <a href="#">Firefox</a>
+                    </p>
+                </div>
+                <div class="card">
+                    <h4 class="custom-title-center">Best Members</h4>
+                    <p class="custom-text-center">
+                        <a href="#">Mr.Freeman</a>
+                        <a href="#">Dr.House</a>
+                        <a href="#">Bender</a>
+                        <a href="#">dondiego</a>
+                        <a href="#">murty</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="card">
+
+                    <div class="text-left">
+                        <h2 class="custom-title-left">Log In</h2>
+                        <h4 id="error-text" class="custom-text-left custom-text-error">Wrong login or password</h4>
+                        <form>
+                            <div class="form-group">
+                                <label for="login" class="custom-title-left">Login:</label>
+                                <input type="text" class="form-control custom-input-text" id="login" placeholder="Enter login"
+                                       maxlength="100">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="custom-title-left">Password:</label>
+                                <input type="password" class="form-control custom-input-text" id="password" placeholder="Enter password"
+                                       maxlength="100">
+                            </div>
+                            <button type="submit" class="btn btn-default custom-button">Log In</button>
+                            <div class="margin-top custom-text-center">
+                                <a href="/QuestionDay/pages/signup.html">Create new account</a>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../vendor/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="../vendor/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../vendor/bootstrap/bootstrap-filestyle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="div-align-left">
+        <h2 class="custom-title-left text-inline-block">Tag:</h2>
+        <h2 class="custom-text-left text-inline-block">{{ tag_name }}</h2>
+    </div>
+    <div class="container-fluid text-center">
+        {% for question in questions %}
+		{% include "question_item.html" %}		 
+        {% endfor %}
+    </div>
+    {% include "paginator.html" %}
+{% endblock %}
+

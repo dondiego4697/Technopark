@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="text-left">
+        <h2 class="custom-title-left">Sign Up</h2>
+        {% for e in form.non_field_errors %}
+            <h4 id="error-text" class="custom-text-left custom-text-error">{{ e }}</h4>
+        {% endfor %}
+        <form enctype="multipart/form-data" method="post" action="{% url 'signup' %}?continue={{ get }}">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group {% if field.errors %}has-error {% endif %}">
+                    <label class="custom-title-left">{{ field.label }}:</label>
+                    {{ field }}
+                </div>
+                {% if field.errors %}<p class="help-block custom-text-left">{{ field.errors }}</p>{% endif %}
+            {% endfor %}
+            <button type="submit" class="btn btn-default custom-button">Register</button>
+        </form>
+    </div>
+{% endblock %}

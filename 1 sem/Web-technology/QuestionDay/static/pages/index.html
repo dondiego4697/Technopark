@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question day</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+    <link rel="stylesheet" href="../src/css/main/styles.css">
+    <link rel="stylesheet" href="../src/css/texts/text.css">
+    <link rel="stylesheet" href="../src/css/views/buttons.css">
+    <link rel="stylesheet" href="../src/css/views/inputs.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+</head>
+<body class="bg-color">
+<div class="container">
+    <div class="container-fluid text-center margin-bottom">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="../src/img/logo.png" class="logo-image" width="100" height="100" alt="logo" onclick="location.href='index.html'">
+                <h4 class="custom-title-center">QUESTION DAY</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <h4 class="custom-title-center">nickname</h4>
+                    <img src="../src/img/default_avatar.png" width="100" height="100" class="img-circle" alt="avatar">
+
+                    <div>
+                        <form action="/pages/settings.html">
+                            <button type="button" class="custom-button" onclick="location.href='settings.html'">Settings</button>
+                        </form>
+                        <button type="button" class="custom-button">Log Out</button>
+                        <button type="button" class="custom-button custom-button__important" onclick="location.href='ask.html'">Ask</button>
+                    </div>
+                </div>
+                <!--<div class="card">
+                    <button type="button" class="custom-button no-margin-top">Log In</button>
+                    <button type="button" class="custom-button">Register</button>
+                </div>-->
+                <div class="card">
+                    <h4 class="custom-title-center">Popular Tags</h4>
+                    <p class="custom-text-center">
+                        <a href="#">perl</a>
+                        <a href="#">python</a>
+                        <a href="#">TechnoPark</a>
+                        <a href="#">MySQL</a>
+                        <a href="#">django</a>
+                        <a href="#">Mail.Ru</a>
+                        <a href="#">Firefox</a>
+                    </p>
+                </div>
+                <div class="card">
+                    <h4 class="custom-title-center">Best Members</h4>
+                    <p class="custom-text-center">
+                        <a href="#">Mr.Freeman</a>
+                        <a href="#">Dr.House</a>
+                        <a href="#">Bender</a>
+                        <a href="#">dondiego</a>
+                        <a href="#">murty</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="card">
+                    <div class="form-group no-margin">
+                        <input type="text" class="form-control custom-input-text" placeholder="Search"
+                               maxlength="100">
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div>
+                        <div class="div-align-left">
+                            <h2 class="custom-title-left text-inline-block">New Questions</h2>
+                            <h3 class="custom-text-left text-inline-block"><a href="#">Hot Questions</a></h3>
+                        </div>
+                        <div class="container-fluid text-center">
+                            <div class="row card">
+                                <div class="col-sm-3 margin-bottom">
+                                    <img src="../src/img/default_avatar.png" width="100" height="100" class="img-circle"
+                                         alt="avatar">
+                                    <div class="form-group margin-bottom">
+                                       <!-- <label>
+                                            <input type="number"
+                                                   class="form-control custom-input-text margin-top"
+                                                   step="1"
+                                                   value="0"
+                                                   onkeypress="return false">
+                                        </label>-->
+                                        <div class="div-inline-block">
+                                            <button type="submit" class="custom-button inline-width pages-nav-btn">-</button>
+                                            <h4 class="div-inline-block custom-title-center text-counter">0</h4>
+                                            <button type="submit" class="custom-button inline-width pages-nav-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9 text-left">
+                                    <a href="/QuestionDay/pages/question.html"><h3 class="custom-text-left no-margin-top">"commentCount": unsigned
+                                        long</h3></a>
+                                    <h4 class="custom-text-left">
+                                        When you see the JSON, Under the statistics part you have viewCount.
+                                        which gives you the number of views.
+                                    </h4>
+                                    <div>
+                                        <h4 class="custom-title-left div-inline-block">Tags: </h4>
+                                        <a href="/QuestionDay/pages/tag.html" class="custom-text-left">black-jack</a>
+                                        <a href="/QuestionDay/pages/tag.html" class="custom-text-left">bender</a>
+                                    </div>
+                                    <div>
+                                        <h4 class="custom-text-left"><a href="/QuestionDay/pages/question.html">Show answers (3)</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row card">
+                                <div class="col-sm-3 margin-bottom">
+                                    <img src="../src/img/default_avatar.png" width="100" height="100" class="img-circle"
+                                         alt="avatar">
+                                    <div class="form-group margin-bottom">
+                                        <div class="div-inline-block">
+                                            <button type="submit" class="custom-button inline-width pages-nav-btn">-</button>
+                                            <h4 class="div-inline-block custom-title-center text-counter">0</h4>
+                                            <button type="submit" class="custom-button inline-width pages-nav-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-9 text-left">
+                                    <a href="/QuestionDay/pages/question.html"><h3 class="custom-text-left no-margin-top">How to get youtube video
+                                        views from youtube
+                                        video player in Android</h3></a>
+                                    <h4 class="custom-text-left">
+                                        I want to do something like:
+                                        if (scrollheight == x)
+                                        navbar.addclass "sticky"
+                                    </h4>
+                                    <div>
+                                        <h4 class="custom-title-left div-inline-block">Tags: </h4>
+                                        <a href="#" class="custom-text-left">black-jack</a>
+                                        <a href="#" class="custom-text-left">bender</a>
+                                    </div>
+                                    <div>
+                                        <h4 class="custom-text-left div-inline-block"><a href="/QuestionDay/pages/question.html">Show answers (5)</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="btn-group custom-text-left">
+                            <button type="button" class="custom-button inline-width pages-nav-btn">1</button>
+                            <button type="button" class="custom-button inline-width pages-nav-btn">2</button>
+                            <button type="button" class="custom-button inline-width pages-nav-btn">3</button>
+                            <button type="button" class="custom-button inline-width pages-nav-btn" disabled="disabled">...</button>
+                            <button type="button" class="custom-button inline-width pages-nav-btn">53</button>
+                        </div>-->
+                        <ul class="pagination">
+                            <li><a href="#">«</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a class="active" href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">»</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../vendor/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="../vendor/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../vendor/bootstrap/bootstrap-filestyle.min.js"></script>
+</body>
+</html>

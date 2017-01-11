@@ -1,0 +1,21 @@
+<html>
+<body>
+<p name='method_post'>Method: POST</p>
+<form method='post' action='{% url 'post_get_view' %}'>
+    {% csrf_token %}
+    <p>Message: <input type='text' name='msg' value=''></p>
+    <p><input type='submit' value='Submit'></p>
+</form>
+<br>
+<p name='method_get'>Method: GET</p>
+<form method='get' action='{% url 'post_get_view' %}'>
+    <p>Message: <input type='text' name='q' value=''></p>
+    <p><input type='submit' value='Submit'></p>
+</form>
+
+{% for x in data %}
+    {{ x }}<br>
+{% endfor %}
+
+</body>
+</html>

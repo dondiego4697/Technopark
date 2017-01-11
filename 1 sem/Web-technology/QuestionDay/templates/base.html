@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ block_title }}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/css/main/styles.css">
+
+    <link rel="stylesheet" href="/src/css/texts/text.css">
+    <link rel="stylesheet" href="/src/css/views/buttons.css">
+    <link rel="stylesheet" href="/src/css/views/inputs.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css">
+</head>
+<body class="bg-color">
+<div class="container">
+    <div class="container-fluid text-center margin-bottom">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="/src/img/logo.png" class="logo-image" width="100" height="100" alt="logo"
+                     onclick="location.href='/'">
+                <h4 class="custom-title-center">QUESTION DAY</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+		<div data-spy="affix" data-offset-top="139">
+                <div class="card">
+                        {% if user.is_authenticated %}
+                            <div>
+                                <h4 class="custom-title-center">{{ user.profile }}</h4>
+                                {% if user.profile.avatar != '' %}
+                                    <img src="/{{ user.profile.avatar }}" width="100" height="100" class="img-circle"
+                                         alt="avatar">
+                                {% else %}
+                                    <img src="/src/img/default_avatar.png" width="100" height="100" class="img-circle"
+                                         alt="avatar">
+                                {% endif %}
+
+                                <a href="{% url 'settings' %}" class="btn custom-button" role="button">Settings</a>
+                                <a href="{% url 'logout' %}" class="btn custom-button" role="button">Log Out</a>
+                                <a href="{% url 'ask' %}" class="btn custom-button custom-button__important"
+                                   role="button">Ask</a>
+                            </div>
+                        {% else %}
+                            {% if get == None %}
+                                <a href="{% url 'login' %}?continue={{ request.path }}" class="btn custom-button"
+                                   role="button">Log In</a>
+                                <a href="{% url 'signup' %}?continue={{ request.path }}" class="btn custom-button"
+                                   role="button">Register</a>
+                            {% else %}
+                                <a href="{% url 'login' %}?continue={{ get }}" class="btn custom-button"
+                                   role="button">Log In</a>
+                                <a href="{% url 'signup' %}?continue={{ get }}" class="btn custom-button"
+                                   role="button">Register</a>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                <div class="card">
+                    <h4 class="custom-title-center">Popular Tags</h4>
+                    <p class="custom-text-center">
+                        {% for tag in popular_tags %}
+                                <a href="{% url 'bytag' tag.name %}">{{ tag.name }}</a>
+                        {% endfor %}
+                    </p>
+                </div>
+                <div class="card">
+                    <h4 class="custom-title-center">Best Members</h4>
+                    <p class="custom-text-center">
+                        {% for user in popular_users %}
+                                <a>{{ user.nickname }}</a>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+	    </div>
+            <div class="col-sm-9">
+                <div class="card">
+                    {%  block content %} {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/vendor/jquery/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="/vendor/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="/vendor/bootstrap/bootstrap-filestyle.min.js"></script>
+<script type="text/javascript" src="/src/js/voteing.js"></script>
+<script type="text/javascript" src="/src/js/correcting.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.custom-title-center {
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.custom-title-left {
+    font-family: 'Titillium Web', sans-serif;
+    text-align: left;
+    margin: 10px 0 10px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.custom-text-center {
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    /*font-weight: bold !important;*/
+    margin: 10px 0 10px 0;
+}
+
+.custom-text-left {
+    font-family: 'Titillium Web', sans-serif;
+    text-align: left;
+    /*font-weight: bold !important;*/
+    margin: 10px 0 10px 10px;
+}
+
+.custom-text-error {
+    color: #d5415c;
+}
+
+.text-inline-block {
+    display: inline-block;
+}
+
+.text-counter{
+    margin: 0 5px 0 5px
+}

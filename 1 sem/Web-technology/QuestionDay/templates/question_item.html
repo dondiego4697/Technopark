@@ -1,0 +1,24 @@
+<div class="row card">
+    <div class="col-sm-3 margin-bottom">
+        {% if question.user.avatar != '' %}
+            <img src="/{{ question.user.avatar }}" width="100" height="100" class="img-circle"
+                 alt="avatar">
+        {% else %}
+            <img src="/src/img/default_avatar.png" width="100" height="100" class="img-circle"
+                 alt="avatar">
+        {% endif %} 
+    </div>
+    <div class="col-sm-9 text-left">
+        <a href="{% url 'question' question.id %}"><h3 class="custom-text-left no-margin-top">
+            {{ question.title|truncatechars:50 }}</h3></a>
+                <div>
+            {% for tag in question.tag_list %}
+                  <a href="{% url 'bytag' tag.name %}" class="custom-title-left tag">{{ tag.name }}</a>
+            {% endfor %}
+        </div>
+        <div>
+            <h4 class="custom-text-left answer"><a href="{% url 'question' question.id %}">Answers ({{ question.answers_count }})</a>
+            </h4>
+        </div>
+    </div>
+</div>

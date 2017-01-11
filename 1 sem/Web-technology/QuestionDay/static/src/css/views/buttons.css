@@ -1,0 +1,33 @@
+.custom-button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 100%;
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0 0 0;
+    text-align: center;
+    font-weight: bold !important;
+    background-color: #ebe9f5 !important;
+    border: 1px solid #a5a3af !important;
+    color: black !important;
+    border-radius: 3px;
+    -webkit-transition: all 0.5s ease;
+}
+
+.custom-button:hover {
+    background-color: white !important;
+    border: 1px solid #787680 !important;
+    color: black !important;
+}
+
+.custom-button__important {
+    color: white !important;
+    background-color: #d5415c !important;
+}
+
+.inline-width {
+    width: auto !important;
+}
+
+.pages-nav-btn {
+    width: 30px !important;
+}
